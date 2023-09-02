@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+Desafío: Desarrollo de una encuesta en React con preguntas y valoraciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descripción:
+Debes crear una aplicación web que permita a los usuarios responder una encuesta con preguntas y valoraciones del 1 al 5. El listado de preguntas será cargado desde un JSON mockeado. La aplicación debe cumplir con los siguientes requisitos:
 
-Currently, two official plugins are available:
+- Mostrar una pregunta a la vez, con sus opciones de valoración del 1 al 5.
+- Permitir al usuario seleccionar una valoración para cada pregunta.
+- Mostrar la siguiente pregunta después de que el usuario haya respondido la actual.
+- Al finalizar la encuesta, mostrar un resumen con las respuestas del usuario.
+- Requisitos técnicos:
+- Utiliza React para construir la aplicación.
+- Para el CSS utilizar algún framework como Bootstrap o Material-UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Entrega:
+Una vez completado, puedes compartir tu solución proporcionando el código fuente en un repositorio de GitHub u otra plataforma de alojamiento de código. Asegúrate de incluir instrucciones claras sobre cómo ejecutar y probar la aplicación.
 
-## Expanding the ESLint configuration
+¡Buena suerte en el desafío!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+JSON de ejemplo:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+{
+    "preguntas": [
+        {
+            "id": 1,
+            "texto": "¿Qué tan satisfecho estás con el producto?",
+            "valoracion": 5
+        },
+        {
+            "id": 2,
+            "texto": "¿Cuál es tu opinión sobre el servicio al cliente?",
+            "valoracion": 5
+        },
+        {
+            "id": 3,
+            "texto": "¿Cómo calificarías la usabilidad del sitio web?",
+            "valoracion": 5
+        },
+        {
+            "id": 4,
+            "texto": "¿Recomendarías nuestro producto a otros?",
+            "valoracion": 5
+        },
+        {
+            "id": 5,
+            "texto": "¿Cómo evaluarías la calidad del producto?",
+            "valoracion": 5
+        }
+    ]
+}
