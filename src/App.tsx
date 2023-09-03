@@ -4,10 +4,15 @@ import { type Question } from './types/question';
 import questionsJson from './mocks/questions.json';
 import './App.css';
 
-const questions: Question[] = questionsJson as Question[];
-
 export function App() {
+    const [questions, setQuestions] = useState<Question[]>(questionsJson as Question[]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
+
+    const setRating = (rating: Question['rating']) => {
+        const newQuestions = structuredClone(questions);
+        newQuestions[currentQuestion].rating = rating;
+        setQuestions(newQuestions);
+    };
 
     const nextQuestion = () => setCurrentQuestion(prevState => prevState + 1);
     const prevQuestion = () => setCurrentQuestion(prevState => prevState - 1);
@@ -19,6 +24,7 @@ export function App() {
                 <QuestionsList 
                     questions={questions}
                     currentQuestion={currentQuestion}
+                    setRating={setRating}
                     nextQuestion={nextQuestion}
                     prevQuestion={prevQuestion}
                 />
