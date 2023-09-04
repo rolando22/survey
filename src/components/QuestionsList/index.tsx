@@ -15,28 +15,32 @@ export function QuestionsList({ questions, currentQuestion, nextQuestion, prevQu
     const handlerOnClickPrevQuestion = () => prevQuestion();
 
     return (
-        <section className='w-full grid gap-8 px-20 py-10'>
-            <article>
+        <section className='w-full grid gap-8 sm:px-20 sm:py-10 px-0 py-10'>
+            <article className='w-full border rounded-md p-4'>
                 <h3>{questions[currentQuestion].text}</h3>
                 <Rating 
                     rating={questions[currentQuestion].rating}
                     setRating={setRating}
                 />
             </article>
-            <div className='flex gap-40 justify-between'>
-                <button 
-                    onClick={handlerOnClickPrevQuestion}
-                    disabled={currentQuestion === 0}
-                >
-                        Anterior
-                </button>
+            <div className='w-full grid gap-5'>
                 <p>{currentQuestion + 1} / {questions.length}</p>
-                <button 
-                    onClick={handlerOnClickNextQuestion}
-                    disabled={currentQuestion === questions.length - 1}
-                >
-                    Siguiente
-                </button>
+                <div className='flex justify-between'>
+                    <button 
+                        className={`bg-gray-300 hover:bg-green-400 text-gray-800 font-bold py-2 px-4 rounded-md ${currentQuestion === 0 ? 'opacity-50 hover:bg-gray-300' : ''}`}
+                        onClick={handlerOnClickPrevQuestion}
+                        disabled={currentQuestion === 0}
+                    >
+                            Anterior
+                    </button>
+                    <button 
+                        className={`bg-gray-300 hover:bg-green-400 text-gray-800 font-bold py-2 px-4 rounded-md ${currentQuestion === questions.length - 1 ? 'opacity-50 hover:bg-gray-300' : ''}`}
+                        onClick={handlerOnClickNextQuestion}
+                        disabled={currentQuestion === questions.length - 1}
+                    >
+                        Siguiente
+                    </button>
+                </div>
             </div>
         </section>
     );

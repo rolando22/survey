@@ -20,7 +20,7 @@ export function Rating({ rating, setRating, isReadOnly = false }: Props) {
 
     return (
         <p 
-            className='text-3xl'
+            className='text-3xl text-yellow-300'
             onMouseLeave={handlerMouseLeaveRating(rating)}
         >
             {"★"

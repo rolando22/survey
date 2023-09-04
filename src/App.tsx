@@ -24,10 +24,12 @@ export function App() {
         setQuestions(questionsJson as Question[]);
     };
 
+    const isFinishSurvey = questions.some(question => question.rating === 0);
+
     return (
         <>
             <h1 className='text-3xl font-bold underline'>Encuesta</h1>
-            <main className='w-full p-10'>
+            <main className='w-full sm:px-10'>
             {!finish 
                 ? <>
                     <QuestionsList 
@@ -37,13 +39,24 @@ export function App() {
                         nextQuestion={nextQuestion}
                         prevQuestion={prevQuestion}
                     />
-                    <button onClick={finishSurvey}>Finalizar</button>
+                    <button 
+                        className={`bg-gray-300 hover:bg-blue-500 text-gray-800 font-bold py-2 px-4 rounded-md ${isFinishSurvey ? 'opacity-50 hover:bg-gray-300' : ''}`}
+                        onClick={finishSurvey}
+                        disabled={isFinishSurvey}
+                    >
+                        Finalizar
+                    </button>
                 </>
                 : <>
                     <Survey 
                         questions={questions}
                     />
-                    <button onClick={resetSurvey}>Reinciar</button>
+                    <button 
+                        className='bg-gray-300 hover:bg-blue-500 text-gray-800 font-bold py-2 px-4 rounded-md mt-10'
+                        onClick={resetSurvey}
+                    >
+                        Reiniciar
+                    </button>
                 </>
             }
             </main>
