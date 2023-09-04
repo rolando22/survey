@@ -1,4 +1,4 @@
-# Repositorio proyecto Books List con React & TailwindCSS
+# Repositorio proyecto Survey con React & TailwindCSS
 
 El proyecto fue creado en el canal de YouTube de Goncy [Resolvemos la prueba técnica frontend de Payana con Next.js, Tailwindcss y TypeScript](https://www.youtube.com/@goncypozzo).
 
