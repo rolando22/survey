@@ -2,7 +2,7 @@
 
 El proyecto fue creado en el canal de YouTube de Goncy [Resolvemos la prueba técnica frontend de Payana con Next.js, Tailwindcss y TypeScript](https://www.youtube.com/@goncypozzo).
 
-Este repositorio contiene el código de una prueba técnica de Payana de una aplicación de una encuesta, calificarlas hasta con 5 estrellas y al finalizar un resumen de la encuesta con las calificaciones de cada pregunta.
+Este repositorio contiene el código de una prueba técnica de Payana de una aplicación de una encuesta, calificar preguntas hasta con 5 estrellas y al finalizar un resumen de la encuesta con las calificaciones de cada pregunta.
 
 - Desarrollada con React para manipulación del DOM y reactividad de la aplicación.
 - Vite como empaquetador y SWC como transpilador.
