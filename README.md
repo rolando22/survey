@@ -9,7 +9,7 @@ Este repositorio contiene el código de una prueba técnica de Payana de una apl
 - TailwindCSS para los estilos.
 - TypeScript para el tipado del código.
 
-Puedes ver el demo aquí: ().
+Puedes ver el demo aquí: (https://rolando22.github.io/survey/).
 
 # Desafío: Desarrollo de una encuesta en React con preguntas y valoraciones
 
