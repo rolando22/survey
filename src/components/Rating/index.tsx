@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
-import { Question } from "../../types/question";
+import { type Question } from "../../types/question";
 
 interface Props {
     rating: Question['rating']
-    setRating: (rating: Question['rating']) => void
+    setRating?: (rating: Question['rating']) => void
+    isReadOnly?: boolean
 }
 
-export function Rating({ rating, setRating }: Props) {
+export function Rating({ rating, setRating, isReadOnly = false }: Props) {
     const [hoverRating, setHoverRating] = useState<Question['rating']>(rating);
 
-    const handlerOnClickSetRating = (rating: Question['rating']) => () => setRating(rating);
-    const handlerOnMouseOverRating = (hoverRating: Question['rating']) => () => setHoverRating(hoverRating);
-    const handlerMouseLeaveRating = (hoverRating: Question['rating']) => () => setHoverRating(hoverRating);
+    const handlerOnClickSetRating = (rating: Question['rating']) => () => !isReadOnly && setRating?.(rating);
+    const handlerOnMouseOverRating = (hoverRating: Question['rating']) => () => !isReadOnly && setHoverRating(hoverRating);
+    const handlerMouseLeaveRating = (hoverRating: Question['rating']) => () => !isReadOnly && setHoverRating(hoverRating);
 
     useEffect(() => {
         setHoverRating(0);
