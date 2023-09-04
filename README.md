@@ -1,4 +1,17 @@
-Desafío: Desarrollo de una encuesta en React con preguntas y valoraciones
+# Repositorio proyecto Books List con React & TailwindCSS
+
+El proyecto fue creado en el canal de YouTube de Goncy [Resolvemos la prueba técnica frontend de Payana con Next.js, Tailwindcss y TypeScript](https://www.youtube.com/@goncypozzo).
+
+Este repositorio contiene el código de una prueba técnica de Payana de una aplicación de una encuesta, calificarlas hasta con 5 estrellas y al finalizar un resumen de la encuesta con las calificaciones de cada pregunta.
+
+- Desarrollada con React para manipulación del DOM y reactividad de la aplicación.
+- Vite como empaquetador y SWC como transpilador.
+- TailwindCSS para los estilos.
+- TypeScript para el tipado del código.
+
+Puedes ver el demo aquí: ().
+
+# Desafío: Desarrollo de una encuesta en React con preguntas y valoraciones
 
 Descripción:
 Debes crear una aplicación web que permita a los usuarios responder una encuesta con preguntas y valoraciones del 1 al 5. El listado de preguntas será cargado desde un JSON mockeado. La aplicación debe cumplir con los siguientes requisitos:
